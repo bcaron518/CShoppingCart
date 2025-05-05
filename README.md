@@ -1,136 +1,122 @@
-# C Shopping Cart Application
+C Shopping Cart Application
+Overview
+The C Shopping Cart Application is a command-line program written in C that simulates an e-commerce shopping cart. It allows users to register, log in, browse items by shops or categories, add items to a cart, and manage orders.
+This project demonstrates modular programming in C while providing a practical example of a shopping system.
 
-## Overview
-The **C Shopping Cart Application** is a command-line program written in C that simulates the functionality of an e-commerce shopping cart. It includes features like user registration (signup), login, browsing items by shops or categories, adding items to a cart, and managing orders. 
+Features
+1. User Authentication
+- Signup: Validates user information, including name, email, password, phone number, and age.
+- Login: Enables users to log in with their credentials.
 
-This project is designed to demonstrate modular programming in C while providing a practical example of a shopping cart system.
+2. Shopping
+- Browse Shops: View available items categorized by shops.
+- Search Items: Find products across multiple shops.
 
----
+3. Cart Management
+- Add to Cart: Select and store items before purchasing.
+- Order Summary: View total cost and confirm orders.
+- Cancel Orders: Remove items if necessary.
 
-## Features
-1. **User Authentication**:
-   - Signup with validation for name, email, password, phone, and age.
-   - Login functionality with user credentials.
+4. Shop Initialization
+- Predefined Shops: Includes a selection of items with fixed prices.
 
-2. **Shopping**:
-   - Choose items by browsing shops.
-   - Search items directly across multiple shops.
+5. Input Validation
+- Secure Credentials: Enforces strong password creation (uppercase, lowercase, numbers, special characters).
+- Email & Phone Validation: Ensures correct formatting.
+- Duplicate Prevention: Avoids duplicate user accounts.
 
-3. **Cart Management**:
-   - Add items to the cart.
-   - View total cost and confirm the order.
-   - Cancel orders if needed.
 
-4. **Shop Initialization**:
-   - Predefined shops with available items and their prices.
-
-5. **Input Validations**:
-   - Validates user inputs like email format, strong passwords, and mobile numbers.
-   - Ensures no duplicate accounts.
-
----
-
-## File Structure
+File Structure
 The project is organized into modular files for better maintainability:
+Header Files
+- main.h – Contains global variables, structure definitions, and function prototypes.
+- validation.h – Function prototypes for input validation.
+- shop.h – Function prototypes for shopping and cart functionalities.
 
-- **Header Files**:
-  - `main.h`: Contains global variables, structure definitions, and function prototypes.
-  - `validation.h`: Function prototypes for input validation.
-  - `shop.h`: Function prototypes for shopping and cart-related features.
+Source Files
+- main.c – Entry point, handles overall program flow.
+- signup.c – Manages user registration and login.
+- shop.c – Implements shop browsing, item selection, and cart management.
+- validation.c – Handles input validation logic.
 
-- **Source Files**:
-  - `main.c`: Entry point of the program, handles overall flow.
-  - `signup.c`: Handles user registration and login.
-  - `shop.c`: Manages shop browsing, item selection, and cart functionalities.
-  - `validation.c`: Implements input validation logic.
+Build File
+- Makefile – Automates compilation and cleanup.
 
-- **Build File**:
-  - `Makefile`: Automates the build process.
 
----
+Prerequisites
+Ensure you have the following installed:
+- GCC Compiler – Required to compile the project.
 
-## Prerequisites
-- GCC Compiler: Ensure you have a GCC compiler installed to build the project.
 
----
+Compilation and Execution
+To compile and run the program:
+- Clone the repository:git clone https://github.com/bcaron518/CShoppingCart.git
+cd CShoppingCart
 
-## Compilation and Execution
+- Build the program:make
 
-To compile and run the project:
+- Run the executable:./shopcart
 
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/bcaron518/CShoppingCart.git
-   cd CShoppingCart
+- (Optional) Clean up build files:make clean
 
-2. Build the program:
 
-   ```bash
-   make
-   
-3. Run the executable:
 
-  ```bash
-  ./shopcart
+How It Works
+Signup & Login
+- New Users: Must sign up with valid information.
+- Returning Users: Log in with existing credentials.
 
-4. Clean up build files (optional):
+Shopping
+- Browse shops to view available items.
+- Use the search function to find specific products.
 
-```bash
-   make clean
+Cart Management
+- Add items by specifying quantity.
+- View total cost and confirm or cancel orders.
 
----
+Order Confirmation
+- Users finalize purchases before exiting the application.
 
-## How It Works
 
-Signup and Login:
-
-Users must first sign up by providing valid information.
-Returning users can log in with their credentials.
-Shopping:
-
-Users can browse shops or directly search for items.
-Each shop offers a variety of items with fixed prices.
-
-Cart:
-
-Add items to the cart by specifying quantities.
-View the total cost and confirm or cancel orders.
-Order Confirmation:
-
-Users can confirm their orders, after which the program exits.
-Example Shops and Items
-The application comes preloaded with the following shops and items:
-
+Example Shops & Items
+The application includes predefined shops with various items:
 Puma
-- Puma Sneaker V2: $3499
-- Men's Dryflex: $2999
-- One8x Puma: $5999
-- US Polo
-- US Polo T-Shirt: $999
-- Shoes: $2000
-- Shirt: $1499
-- WROGN
-- Men's Watch: $2000
-- Men's Solid Jacket: $2239
-- Casual T-Shirt: $799
+- Puma Sneaker V2 – $3499
+- Men's Dryflex – $2999
+- One8x Puma – $5999
 
-## Code Highlights
-Input Validation:
+US Polo
+- US Polo T-Shirt – $999
+- Shoes – $2000
+- Shirt – $1499
 
-Ensures strong passwords (uppercase, lowercase, numbers, special characters).
-Checks email formatting and mobile number validity.
-Modular Design:
+WROGN
+- Men's Watch – $2000
+- Men's Solid Jacket – $2239
+- Casual T-Shirt – $799
 
-Splits the program into smaller files for better readability and maintenance.
-Dynamic Cart Calculation:
 
-Calculates the total cost based on user-selected items and quantities.
+Code Highlights
+Input Validation
+- Strong password enforcement.
+- Email and mobile number verification.
 
-## License
-This repository is licensed under the [MIT License](LICENSE). Feel free to use and modify the code as needed for your projects.
+Modular Design
+- Organized into separate files for maintainability.
 
-## Author
-Benjamin Caron - https://github.com/bcaron518
+Dynamic Cart Calculation
+- Computes total cost based on selected items and quantities.
 
-## Contributing
-If you'd like to contribute to this repository or improve the code examples, please feel free to open an issue or submit a pull request. Your contributions are welcome.
+
+License
+This project is licensed under the MIT License. You are free to use and modify the code as needed.
+
+Author
+Developed by Benjamin Caron
+GitHub: bcaron518
+
+Contributing
+Contributions are welcome!
+- Open an issue for suggestions or bug reports.
+- Submit a pull request to improve functionality.
+
