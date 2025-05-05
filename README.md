@@ -146,4 +146,5 @@ GitHub: [bcaron518](https://github.com/bcaron518)
 Contributions are welcome!  
 - Open an issue for suggestions or bug reports.
 - Submit a pull request to improve functionality.
-```
+
+---
